@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Essai Action !</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body { font: 13px "Segoe UI", sans-serif; margin: 8px; overflow-y: scroll; }
+    button { display: block; width: 100%; margin: 4px 0; padding: 6px; text-align: left; cursor: pointer; }
+    p.help { color: #555; margin: 2px 0 8px; }
+    textarea { width: 100%; height: 240px; font: 11px Consolas, monospace; }
+    input { width: 100%; margin: 2px 0; box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <h3>Essai du complément « Action ! »</h3>
+  <p class="help">Suivez les étapes dans l’ordre (guide docs/guides/excel-essai.md). Chaque bouton écrit son résultat dans le rapport en bas.</p>
+  <button id="b1">1. Version d’Excel et API disponibles</button>
+  <button id="b2">2. Préparer la feuille « Essai » (tableau, formats, impression)</button>
+  <button id="b3">3. Insérer 3 photos de test</button>
+  <button id="b4">4. Écouter les événements</button>
+  <p class="help">Après 4 : tapez une valeur dans le tableau, collez 50 lignes, recopiez une cellule vers le bas sur 100 lignes, triez par « Pièce », filtrez « Pièce = Cuisine », supprimez une ligne, insérez une ligne, puis Ctrl+Z. Regardez les photos pendant le tri et le filtre.</p>
+  <button id="b4b">4 bis. Écriture du complément (doit rester silencieuse)</button>
+  <button id="b5">5. Où sont les photos après le tri ?</button>
+  <button id="b5b">5 bis. Ajuster la hauteur des lignes avec le filtre actif</button>
+  <button id="b6">6. 40 photos d’un coup (temps)</button>
+  <button id="b6b">6 bis. 300 photos par lots de 40 (temps)</button>
+  <button id="b7">7. Mémoire du volet (avant / après redémarrage d’Excel)</button>
+  <input id="email" type="email" placeholder="E-mail (compte de l’app)" autocomplete="username" />
+  <input id="password" type="password" placeholder="Mot de passe" autocomplete="current-password" />
+  <button id="b8">8. Connexion Supabase et photo réelle</button>
+  <button id="b9">9. Réglage du classeur et ouverture automatique du volet</button>
+  <button id="copy">Sélectionner le rapport (puis Ctrl+C)</button>
+  <textarea id="log" readonly></textarea>
+  <script src="spike.js"></script>
+</body>
+</html>
